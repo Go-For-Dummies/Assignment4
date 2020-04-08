@@ -12,7 +12,6 @@ EMPTY = 0
 BLACK = 1
 WHITE = 2
 BORDER = 3
-PASS = None
 
 def is_black_white(color):
     return color == BLACK or color == WHITE
