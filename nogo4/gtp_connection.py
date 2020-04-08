@@ -278,7 +278,7 @@ class GtpConnection():
             self.board=self.sboard
             signal.alarm(0)
         except Exception as e:
-            move=self.go_engine.best_move
+            move = self.go_engine.best_move
 
         if move is None:
             self.respond("resign")
