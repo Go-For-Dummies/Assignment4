@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from board_util import EMPTY, BORDER
+from board_util_search import EMPTY, BORDER
 
 
 class TranspositionTable:

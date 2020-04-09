@@ -8,7 +8,7 @@ at the University of Edinburgh.
 """
 import traceback
 from sys import stdin, stdout, stderr
-from board_util import GoBoardUtil, BLACK, WHITE, EMPTY, BORDER, \
+from board_util_nogo import GoBoardUtil, BLACK, WHITE, EMPTY, BORDER, \
                        MAXSIZE, coord_to_point
 import numpy as np
 import re
@@ -54,7 +54,7 @@ class GtpConnection():
             "gogui-analyze_commands": self.gogui_analyze_cmd,
             "timelimit": self.timelimit_cmd
         }
-        self.timelimit = 30 
+        self.timelimit = 29 
 
         # used for argument checking
         # values: (required number of arguments, 

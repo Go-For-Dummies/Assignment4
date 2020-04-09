@@ -1,6 +1,6 @@
-from .board_util import GoBoardUtil, BLACK, WHITE, EMPTY
-from .transposition_table import TranspositionTable, TTUtil
-from .heuristic import statisticaly_evaluate
+from board_util_search import GoBoardUtil, BLACK, WHITE, EMPTY
+from transposition_table import TranspositionTable, TTUtil
+from heuristic import statisticaly_evaluate
 
 class SearchPlayer: 
 
@@ -15,7 +15,7 @@ class SearchPlayer:
         self.tt.dump_to_file()
 
     def negamax(self, board, bbl = [], wbl = [], bneyes = [], wneyes = [], beyes = [], weyes = [],
-            weight = None, HeuristicMode = True, SymmetryCheck = True):
+            weight = None, HeuristicMode = True, SymmetryCheck = False):
         """
         Simple boolean negamax implementation with transposition table optimization
 

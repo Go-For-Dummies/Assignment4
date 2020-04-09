@@ -1,8 +1,8 @@
 from gtp_connection import GtpConnection, format_point, point_to_coord
-from board_util import GoBoardUtil, EMPTY, BLACK, WHITE
+from board_util_nogo import GoBoardUtil, EMPTY, BLACK, WHITE
 from simple_board import SimpleGoBoard
-from simulation import SimulationPlayer
-from search import SearchPlayer
+from sim_player import SimulationPlayer
+from search_player import SearchPlayer
 import numpy as np
 import random 
 import signal
@@ -41,8 +41,12 @@ class NoGoFlatMC():
         The genmove function using one-ply MC search.
         """
         board = original_board.copy()
+        # Pick random move in case we time out
+        self.best_move = GoBoardUtil.generate_random_move(board, color)
+        # Try to get a move via simulation
         self.best_move = self.simulation_player.get_move(board, color)
         board = original_board.copy()
+        # Try to get a perfect move with search
         self.best_move = self.search_player.get_move(board, color)
         return self.best_move
 

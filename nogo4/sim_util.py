@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from .board_util import GoBoardUtil, BLACK, WHITE
+from board_util_sim import GoBoardUtil, BLACK, WHITE
 
 
 class SimUtil:

@@ -2,10 +2,10 @@
 #/usr/bin/python3
 # Set the path to your python3 above
 from pathlib import Path
-from board_util import GoBoardUtil
-from .sim_util import SimUtil
-from .weighting import WeightUtil
-from .ucb import run_ucb
+from board_util_sim import GoBoardUtil
+from sim_util import SimUtil
+from weighting import WeightUtil
+from ucb import run_ucb
 import numpy as np
 
 class SimulationPlayer():
@@ -17,7 +17,7 @@ class SimulationPlayer():
         Passe/resigns only at the end of game.
 
         """
-        self.weight_util = WeightUtil(Path('simulation/weights'))
+        self.weight_util = WeightUtil(Path('weights'))
         self.n_sim = 10
     
     def get_move(self, board, color):

@@ -1,12 +1,12 @@
 import re
 from pkgutil import get_data
-from .board_util import GoBoardUtil, BLACK, WHITE, EMPTY, BORDER
+from board_util_sim import GoBoardUtil, BLACK, WHITE, EMPTY, BORDER
 
 
 class WeightUtil:
 
     def __init__(self, file):
-        weightlist = str(get_data('nogo4', 'simulation/weights').decode('utf-8')).strip().split('\n')
+        weightlist = str(get_data('nogo4', 'weights').decode('utf-8')).strip().split('\n')
         self.weightdict = {}
         for line in weightlist:
             splitline = re.split(" ", line)

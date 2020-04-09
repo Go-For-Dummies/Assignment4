@@ -11,7 +11,7 @@ CAPTUREPOINTS = 2
 DEBUGMODE = False
 
 import numpy as np
-from board_util import GoBoardUtil, BLACK, WHITE, EMPTY, BORDER, MAXSIZE
+from board_util_search import GoBoardUtil, BLACK, WHITE, EMPTY, BORDER, MAXSIZE
 from simple_board import SimpleGoBoard
 
 def point_to_coord(point, boardsize):
