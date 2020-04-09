@@ -1,7 +1,7 @@
 import pexpect
 
 player1='nogo4/nogo4.py'
-player2='flat_mc_player/nogo_flat_mc.py' 
+player2='random_player/nogo_random.py' 
 
 win1=0
 win2=0
@@ -84,7 +84,7 @@ def playSingleGame(alternative=False):
     print(winner, istimeout)
     return result,istimeout
 
-def playGames(numGame=5):
+def playGames(numGame=1):
     global win1,win2,numTimeout
     for i in range(0,numGame):
         if(i<numGame/2):

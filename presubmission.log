@@ -1,0 +1,56 @@
+Script started on Wed 08 Apr 2020 10:28:00 PM MDT
+elake@ug02:~/go>mkdir newdir
+elake@ug02:~/go>mv assignment4.tgz newdir/assignment4.tgz
+elake@ug02:~/go>cd newdir
+elake@ug02:~/go/newdir>ls
+assignment4.tgz
+elake@ug02:~/go/newdir>g[Kun[K[Ktar -xf assignment4.tgz 
+elake@ug02:~/go/newdir>cd assignment4
+elake@ug02:~/go/newdir/assignment4>python3 play.py 
+A1
+E6
+D1
+F1
+C6
+D4
+C2
+D3
+E2
+B7
+B3
+A4
+E4
+G2
+B1
+E1
+A3
+F5
+F7
+D6
+C4
+C3
+F3
+F6
+A7
+D7
+G4
+G3
+A5
+E7
+B5
+D2
+D5
+F4
+B6
+B2
+G6
+F2
+E5
+C7
+C1
+player1 0
+player1 win 1 player2 win 0 timeout 0
+elake@ug02:~/go/newdir/assignment4>exit
+exit
+
+Script done on Wed 08 Apr 2020 10:38:57 PM MDT
